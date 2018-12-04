@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CEB769AC-70C0-4040-8C41-4B98FC197331}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Etat_civil</RootNamespace>
+    <AssemblyName>Etat_civil</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Model.cs" />
+    <Compile Include="Layouts\Admin\Log.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts\Admin\Log.Designer.cs">
+      <DependentUpon>Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Admin\AdminMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts\Admin\AdminMain.Designer.cs">
+      <DependentUpon>AdminMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Citizens\addCitizen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts\Citizens\addCitizen.Designer.cs">
+      <DependentUpon>addCitizen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Authentification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts\Authentification.Designer.cs">
+      <DependentUpon>Authentification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Citizens\addDeathCert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts\Citizens\addDeathCert.Designer.cs">
+      <DependentUpon>addDeathCert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Citizens\addMariageCert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts\Citizens\addMariageCert.Designer.cs">
+      <DependentUpon>addMariageCert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Citizens\editCitizen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts\Citizens\editCitizen.Designer.cs">
+      <DependentUpon>editCitizen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layouts\Search.Designer.cs">
+      <DependentUpon>Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Adresse.cs" />
+    <Compile Include="Models\Birth.cs" />
+    <Compile Include="Models\Certificate.cs" />
+    <Compile Include="Models\Citizen.cs" />
+    <Compile Include="Models\Death.cs" />
+    <Compile Include="Models\Mariage.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Layouts\Admin\AdminMain.resx">
+      <DependentUpon>AdminMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\Admin\Log.resx">
+      <DependentUpon>Log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\Authentification.resx">
+      <DependentUpon>Authentification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\Citizens\addCitizen.resx">
+      <DependentUpon>addCitizen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\Citizens\addDeathCert.resx">
+      <DependentUpon>addDeathCert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\Citizens\addMariageCert.resx">
+      <DependentUpon>addMariageCert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\Citizens\editCitizen.resx">
+      <DependentUpon>editCitizen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\Search.resx">
+      <DependentUpon>Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\LogIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\LogOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
